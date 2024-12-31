@@ -1,11 +1,8 @@
-
-# milestone_4.py
-
 import random
 
-# Step 1: Create the Hangman class
+# Create the Hangman class
 class Hangman:
-    # Step 2: Define the __init__ method with word_list and num_lives as parameters
+    # Define the __init__ method with word_list and num_lives as parameters
     def __init__(self, word_list, num_lives=5):
         # Step 3: Initialize the attributes
         self.word_list = word_list  # List of possible words
@@ -15,7 +12,7 @@ class Hangman:
         self.num_letters = len(set(self.word))  # Number of unique letters in the word
         self.list_of_guesses = []  # List to track the guesses already made
 
-    # Step 2: Define the check_guess method
+    # Define the check_guess method
     def check_guess(self, guess):
         guess = guess.lower()  # Convert the guess to lowercase
         
@@ -40,7 +37,7 @@ class Hangman:
         
         self.display_game_state()  # Show updated game state
 
-    # Step 3: Define the ask_for_input method
+    # Define the ask_for_input method
     def ask_for_input(self):
         while True:
             guess = input("Please guess a letter: ")
@@ -62,10 +59,3 @@ class Hangman:
         print("Word to guess:", ' '.join(self.word_guessed))
         print(f"Lives remaining: {self.num_lives}")
         print(f"Guessed letters: {', '.join(self.list_of_guesses)}")
-
-# Example usage:
-if __name__ == "__main__":
-    word_list = ["apple", "banana", "grape", "orange", "melon"]
-    game = Hangman(word_list)  # Create a Hangman game instance
-    game.ask_for_input()  # Ask the user to guess a letter
-

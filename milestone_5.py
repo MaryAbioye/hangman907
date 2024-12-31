@@ -1,10 +1,8 @@
-# milestone_5.py
-
 import random
 
-# Step 1: Define the Hangman class
+# Define the Hangman class
 class Hangman:
-    # Step 2: Define the __init__ method with word_list and num_lives as parameters
+    #  Define the __init__ method with word_list and num_lives as parameters
     def __init__(self, word_list, num_lives=5):
         # Step 3: Initialize the attributes
         self.word_list = word_list  # List of possible words
@@ -14,7 +12,7 @@ class Hangman:
         self.num_letters = len(set(self.word))  # Number of unique letters in the word
         self.list_of_guesses = []  # List to track the guesses already made
 
-    # Step 2: Define the check_guess method
+    # Define the check_guess method
     def check_guess(self, guess):
         guess = guess.lower()  # Convert the guess to lowercase
         
@@ -39,7 +37,7 @@ class Hangman:
         
         self.display_game_state()  # Show updated game state
 
-    # Step 3: Define the ask_for_input method
+    #  Define the ask_for_input method
     def ask_for_input(self):
         while True:
             guess = input("Please guess a letter: ")
@@ -62,12 +60,12 @@ class Hangman:
         print(f"Lives remaining: {self.num_lives}")
         print(f"Guessed letters: {', '.join(self.list_of_guesses)}")
 
-# Step 1: Define the play_game function
+#  Define the play_game function
 def play_game(word_list):
     num_lives = 5  # Starting number of lives
     game = Hangman(word_list, num_lives)  # Create an instance of Hangman class
     
-    # Step 2: Game loop
+    # Game loop
     while True:
         # Check if the player has lost the game
         if game.num_lives == 0:
@@ -81,7 +79,7 @@ def play_game(word_list):
             print("Congratulations. You won the game!")
             break
 
-# Step 3: Call the play_game function
+#  Call the play_game function
 if __name__ == "__main__":
     word_list = ["apple", "banana", "grape", "orange", "melon"]  # List of words
     play_game(word_list)  # Start the game with the word list

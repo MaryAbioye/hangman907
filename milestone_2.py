@@ -1,19 +1,16 @@
-
-#MILESTONE 1
-# import Library
 import random
 
 # Create a list containing the names of your 5 favorite fruits
-word_list = ["Avocado", "Banana", "Mango", "Orange", "Grapes"]
+word_list = ["Avocado", "Banana", "Grapes", "Mango", "Orange"]
 
 # Print out the newly created list
 print(word_list)
 
 # Use the random.choice method and pass the word_list variable
-randomWord = random.choice (word_list)
+word = random.choice (word_list)
 
 # print the random word
-print(randomWord)
+print(word)
 
 #input a guess letter
 guess = input('Enter a single leter')
