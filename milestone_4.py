@@ -1,3 +1,4 @@
+
 # milestone_4.py
 
 import random
@@ -67,3 +68,4 @@ if __name__ == "__main__":
     word_list = ["apple", "banana", "grape", "orange", "melon"]
     game = Hangman(word_list)  # Create a Hangman game instance
     game.ask_for_input()  # Ask the user to guess a letter
+
