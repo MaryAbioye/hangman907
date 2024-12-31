@@ -9,10 +9,10 @@ word_list = ["Avocado", "Banana", "Mango", "Orange", "Grapes"]
 print(word_list)
 
 # Use the random.choice method and pass the word_list variable
-word = random.choice (word_list)
+randomWord = random.choice (word_list)
 
 # print the random word
-print(word)
+print(randomWord)
 
 #input a guess letter
 guess = input('Enter a single leter')
